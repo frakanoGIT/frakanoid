@@ -8,7 +8,6 @@ export default function page() {
       <PersonalIntro />
       <About />
       <Skills />
-      <About />
     </>
   );
 }

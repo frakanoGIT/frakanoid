@@ -29,7 +29,7 @@ export default function RootLayout({
             </div>
           </header>
 
-          <main className="max-w-8xl pt-20 overflow-hidden">
+          <main className="max-w-xl mx-auto pt-20 overflow-hidden">
             {children}
           </main>
           <footer className="h-16 bg-gray-100 border-t border-gray-300 flex justify-center items-center">

@@ -1,43 +1,32 @@
-"use client"
-
-import React, { useState } from "react";
+import React from "react";
 import Section from "./Section";
+import SvgHTML5 from "./svg/SvgHTML5";
+import SvgCSS3 from "./svg/SvgCSS3";
+import SvgJS from "./svg/SvgJS";
+import SvgReact from "./svg/SvgReact";
 
 export default function Skills() {
-  const [selectedLanguage, setSelectedLanguage] = useState(null);
-
   const programmingLanguages = [
-    "HTML5",
-    "CSS3",
-    "JavaScript",
-    "React",
+    {name: "HTML5", icon: <SvgHTML5 className="mr-1.5 fill-gray-500" />},
+    {name: "CSS3", icon: <SvgCSS3 className="mr-1.5 fill-gray-500" />},
+    {name: "JavaScript", icon: <SvgJS className="mr-1.5 fill-gray-500" />},
+    {name: "React", icon: <SvgReact className="mr-1.5 fill-gray-500" />},
     // Add more programming languages here
   ];
 
-  const handleLanguageClick = (language) => {
-    setSelectedLanguage(language);
-  };
-
   return (
     <Section title="Skills">
-      <ul className="grid grid-cols-2 gap-4">
+      <ul className="grid grid-cols-2 gap-4 text-gray-500">
         {programmingLanguages.map((language) => (
           <li
-            key={language}
-            onClick={() => handleLanguageClick(language)}
-            className={`cursor-pointer ${
-              selectedLanguage === language ? "text-blue-500 font-semibold" : ""
-            }`}
+            key={language.name}
+            className={`flex p-3 rounded-md shadow bg-gray-100`}
           >
-            {language}
+            {language.icon}
+            {language.name}
           </li>
         ))}
       </ul>
-      {selectedLanguage && (
-        <p className="mt-4">
-          You've selected: <strong>{selectedLanguage}</strong>
-        </p>
-      )}
     </Section>
   );
 }
