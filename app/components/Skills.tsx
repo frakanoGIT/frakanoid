@@ -6,22 +6,19 @@ import SvgJS from "./svg/SvgJS";
 import SvgReact from "./svg/SvgReact";
 
 export default function Skills() {
+  const iconStyles = "mr-1.5"
   const programmingLanguages = [
-    {name: "HTML5", icon: <SvgHTML5 className="mr-1.5 fill-gray-500" />},
-    {name: "CSS3", icon: <SvgCSS3 className="mr-1.5 fill-gray-500" />},
-    {name: "JavaScript", icon: <SvgJS className="mr-1.5 fill-gray-500" />},
-    {name: "React", icon: <SvgReact className="mr-1.5 fill-gray-500" />},
-    // Add more programming languages here
+    { name: "HTML5", icon: <SvgHTML5 className={iconStyles} /> },
+    { name: "CSS3", icon: <SvgCSS3 className={iconStyles} /> },
+    { name: "JavaScript", icon: <SvgJS className={iconStyles} /> },
+    { name: "React", icon: <SvgReact className={iconStyles} /> },
   ];
 
   return (
     <Section title="Skills">
-      <ul className="grid grid-cols-2 gap-4 text-gray-500">
+      <ul className="grid grid-cols-2 gap-4">
         {programmingLanguages.map((language) => (
-          <li
-            key={language.name}
-            className={`flex p-3 rounded-md shadow bg-gray-100`}
-          >
+          <li key={language.name} className={`flex py-3`}>
             {language.icon}
             {language.name}
           </li>
