@@ -6,7 +6,7 @@ import SvgJS from "./svg/SvgJS";
 import SvgReact from "./svg/SvgReact";
 
 export default function Skills() {
-  const iconStyles = "mr-1.5"
+  const iconStyles = "mr-1.5 fill-gray-500"
   const programmingLanguages = [
     { name: "HTML5", icon: <SvgHTML5 className={iconStyles} /> },
     { name: "CSS3", icon: <SvgCSS3 className={iconStyles} /> },
