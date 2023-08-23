@@ -13,17 +13,17 @@ export default function PersonalIntro() {
   const socialMediaButtons = [
     {
       name: "Whatsapp",
-      href: "https://api.whatsapp.com",
+      href: "https://api.whatsapp.com/send?phone=6282114867191",
       icon: <SvgWhatsapp className={socialIconStyles} />,
     },
     {
       name: "Facebook",
-      href: "https://www.facebook.com",
+      href: "https://www.facebook.com/frakano",
       icon: <SvgFacebook className={socialIconStyles} />,
     },
     {
       name: "Instagram",
-      href: "https:www.instagram.com",
+      href: "https://www.instagram.com/frakano",
       icon: <SvgInstagram className={socialIconStyles} />,
     },
   ];

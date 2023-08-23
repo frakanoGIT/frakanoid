@@ -15,7 +15,7 @@ export default function Footer() {
     },
     {
       name: 'Github',
-      href: "https://Github.com",
+      href: "https://github.com/frakanoGIT",
       icon: <SvgGithub className={socialIconStyles} />,
     },
   ];
@@ -30,7 +30,7 @@ export default function Footer() {
   ));
 
   return (
-    <footer className="h-16 bg-gray-100 border-t border-gray-300 flex justify-center items-center">
+    <footer className="h-16 bg-gray-100 px-6 border-t border-gray-300 flex justify-center items-center lg:justify-end xl:rounded-b-3xl xl:shadow-xl">
       <nav className="flex items-center text-gray-500">
         {socialMediaLinksComponents}
       </nav>
