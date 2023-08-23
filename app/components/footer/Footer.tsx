@@ -1,6 +1,6 @@
 import React from "react";
 
-import SocialMediaLink from "../SocialMediaLink";
+import LinkComponent from "../LinkComponent";
 
 import SvgGithub from "../svg/SvgGithub";
 import SvgLinkedin from "../svg/SvgLinkedin";
@@ -21,7 +21,7 @@ export default function Footer() {
   ];
 
   const socialMediaLinksComponents = socialMediaLinks.map((link) => (
-    <SocialMediaLink
+    <LinkComponent
       key={link.name} // Make sure to provide a unique key for each component
       href={link.href}
       icon={link.icon}

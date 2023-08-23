@@ -3,7 +3,7 @@ import Section from "./Section";
 export default function About() {
   return (
     <Section title="About Me" className="lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
-      <p>
+      <p className="leading-7">
         Hey there, I&apos;m Franky, chilling in Jakarta, Indonesia. I&apos;ve
         got this thing for tech and coding; it&apos;s like a puzzle I can&apos;t
         stop solving. Manga and anime? Absolutely my jam &#x2d; those stories
