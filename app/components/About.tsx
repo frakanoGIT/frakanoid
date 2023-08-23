@@ -2,7 +2,7 @@ import Section from "./Section";
 
 export default function About() {
   return (
-    <Section title="About Me">
+    <Section title="About Me" className="lg:row-start-1 lg:row-end-2 lg:col-start-2 lg:col-end-3">
       <p>
         Hey there, I&apos;m Franky, chilling in Jakarta, Indonesia. I&apos;ve
         got this thing for tech and coding; it&apos;s like a puzzle I can&apos;t

@@ -15,7 +15,7 @@ export default function Skills() {
   ];
 
   return (
-    <Section title="Skills">
+    <Section title="Skills" className="lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-2">
       <ul className="grid grid-cols-2 gap-4">
         {programmingLanguages.map((language) => (
           <li key={language.name} className={`flex py-3`}>

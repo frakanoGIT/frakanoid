@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const IntroImage = () => {
   return (
-    <div className="w-48 h-48 rounded-full mb-4 shadow bg-gray-100 overflow-hidden">
+    <div className="w-48 h-48 rounded-full mb-4 shadow-inner bg-gray-100 overflow-hidden">
       <Image
         src="/frakano.png"
         alt="Frakano"

@@ -20,9 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={OPENSANS.className}>
-        <div className="bg-white mx-auto">
+        <div className="bg-white mx-auto xl:max-w-7xl xl:mt-8 xl:shadow-2xl xl:rounded-4xl">
           <Header />
-          <main className="max-w-xl mx-auto pt-20 overflow-hidden">
+          <main className="max-w-xl mx-auto pt-20 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-4 xl:pt-0">
             {children}
           </main>
           <Footer />

@@ -32,7 +32,7 @@ export default function PersonalIntro() {
     <SocialMediaButton key={link.name} href={link.href} icon={link.icon} />
   ));
   return (
-    <figure className="flex flex-col items-center p-6 text-3xl">
+    <figure className="flex flex-col items-center p-6 text-3xl lg:col-start-1 lg:col-end-2">
       <IntroImage />
       <IntroText name="Franky" role="Web Developer" />
       <div className="flex space-x-4">{socialMediaButtonsComponents}</div>
