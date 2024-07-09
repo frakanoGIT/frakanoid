@@ -11,6 +11,9 @@ const config: Config = {
       maxWidth: {
         '8xl': '90rem'
       },
+      minHeight: {
+        '2.5xl': '45rem'
+      }
     },
   },
   plugins: [],

@@ -1,9 +1,11 @@
 import React from "react";
 
 const Blogs = () => {
-    return (
-        <p>Blog posts</p>
-    )
-}
+  return (
+    <section>
+      <p>Nothing to show now</p>
+    </section>
+  );
+};
 
-export default Blogs
+export default Blogs;
