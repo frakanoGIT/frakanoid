@@ -5,7 +5,6 @@ import IntroText from "./IntroText";
 import SocialMediaButton from "../SocialMediaButton";
 
 import SvgWhatsapp from "../svg/SvgWhatsapp";
-import SvgFacebook from "../svg/SvgFacebook";
 import SvgInstagram from "../svg/SvgInstagram";
 
 export default function PersonalIntro() {
@@ -15,11 +14,6 @@ export default function PersonalIntro() {
       name: "Whatsapp",
       href: "https://api.whatsapp.com/send?phone=6282114867191",
       icon: <SvgWhatsapp className={socialIconStyles} />,
-    },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/frakano",
-      icon: <SvgFacebook className={socialIconStyles} />,
     },
     {
       name: "Instagram",

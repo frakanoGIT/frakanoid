@@ -19,7 +19,7 @@ export default function Header() {
           frakano.id
         </h1>
       </Link>
-      <LinkComponent href="#" icon={<SvgBlog className="mr-1.5 fill-gray-500 group-hover:fill-black" />} label="Blogs" isLink={true} />
+      <LinkComponent href="blogs" icon={<SvgBlog className="mr-1.5 fill-gray-500 group-hover:fill-black" />} label="Blogs" isLink={true} />
     </header>
   );
 }
