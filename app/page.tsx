@@ -5,11 +5,11 @@ import RecentProjects from "./components/RecentProjects";
 
 export default function page() {
   return (
-    <section className="lg:grid lg:grid-cols-2">
+    <div className="lg:grid lg:grid-cols-2">
       <PersonalIntro />
       <About />
       <Skills />
       <RecentProjects />
-    </section>
+    </div>
   );
 }

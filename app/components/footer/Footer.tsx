@@ -31,7 +31,7 @@ export default function Footer() {
 
   return (
     <footer className="h-16 bg-gray-100 px-6 border-t border-gray-300 flex justify-center items-center lg:justify-end xl:rounded-b-3xl xl:shadow-xl">
-      <nav className="flex items-center">{socialMediaLinksComponents}</nav>
+      <div className="flex items-center">{socialMediaLinksComponents}</div>
     </footer>
   );
 }

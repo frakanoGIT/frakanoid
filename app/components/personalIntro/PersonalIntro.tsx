@@ -25,10 +25,11 @@ export default function PersonalIntro() {
   const socialMediaButtonsComponents = socialMediaButtons.map((link) => (
     <SocialMediaButton key={link.name} href={link.href} icon={link.icon} />
   ));
+  const getYearsOld = new Date().getFullYear() - 1996;
   return (
     <figure className="flex flex-col items-center p-6 text-3xl lg:col-start-1 lg:col-end-2">
       <IntroImage />
-      <IntroText name="Franky" role="Web Developer" />
+      <IntroText name={`Franky (${getYearsOld} y.o)`} role="Web Developer" />
       <div className="flex space-x-4">{socialMediaButtonsComponents}</div>
     </figure>
   );
