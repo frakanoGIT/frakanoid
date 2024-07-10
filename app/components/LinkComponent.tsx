@@ -17,10 +17,10 @@ const LinkComponent: React.FC<SocialMediaLinkProps> = ({
 
   const Component = isLink ? Link : 'a';
   return (
-    <Component href={href} target="_blank" className="mx-2 group" >
+    <Component href={href} target={isLink ? "_self" : "_blank"} className="mx-2 group" >
       <figure className="flex items-center group-hover:text-black group-hover:border-black">
         {icon}
-        <figcaption className="border-b border-transparent transition duration-300 group-hover:border-black">
+        <figcaption className="capitalize border-b border-transparent transition duration-300 group-hover:border-black">
           {label}
         </figcaption>
       </figure>

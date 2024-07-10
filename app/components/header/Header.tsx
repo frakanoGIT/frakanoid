@@ -8,10 +8,26 @@ import LinkComponent from "../LinkComponent";
 import SvgFrakano from "../svg/SvgFrakano";
 import SvgBlog from "../svg/SvgBlog";
 import SvgArchive from "../svg/SvgArchive";
+import SvgPerson from "../svg/SvgPerson";
 
 const RUBIK = Rubik({ subsets: ["latin"] });
 
 export default function Header() {
+  const navPathStyles = "mr-1.5 fill-gray-500 group-hover:fill-black";
+  const navPaths = [
+    {
+      name: "about",
+      icon: <SvgPerson className={navPathStyles} />,
+    },
+    {
+      name: "archives",
+      icon: <SvgArchive className={navPathStyles} />,
+    },
+    {
+      name: "blogs",
+      icon: <SvgBlog className={navPathStyles} />,
+    },
+  ];
   return (
     <header className="sticky top-0 z-50 h-20 w-full bg-gray-100 px-6 border-b border-b-gray-300 flex justify-between items-center overflow-hidden xl:static xl:max-w-7xl xl:rounded-t-3xl">
       <Link href="/" className="flex group">
@@ -23,22 +39,15 @@ export default function Header() {
         </h1>
       </Link>
       <nav className="flex">
-        <LinkComponent
-          href="archives"
-          icon={
-            <SvgArchive className="mr-1.5 fill-gray-500 group-hover:fill-black" />
-          }
-          label="Archives"
-          isLink={true}
-        />
-        <LinkComponent
-          href="blogs"
-          icon={
-            <SvgBlog className="mr-1.5 fill-gray-500 group-hover:fill-black" />
-          }
-          label="Blogs"
-          isLink={true}
-        />
+        {navPaths.map((path) => (
+          <LinkComponent
+            key={path.name}
+            href={path.name}
+            icon={path.icon}
+            label={path.name}
+            isLink={true}
+          />
+        ))}
       </nav>
     </header>
   );

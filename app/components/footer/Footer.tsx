@@ -9,12 +9,12 @@ export default function Footer() {
   const socialIconStyles = "mr-1.5 fill-gray-500 group-hover:fill-black";
   const socialMediaLinks = [
     {
-      name: "Discord",
-      href: "https://discordapp.com/users/frakano/",
+      name: "discord",
+      href: "https://discordapp.com/users/frakano",
       icon: <SvgDiscord className={socialIconStyles} />,
     },
     {
-      name: "Github",
+      name: "github",
       href: "https://github.com/frakanoGIT",
       icon: <SvgGithub className={socialIconStyles} />,
     },
@@ -23,9 +23,9 @@ export default function Footer() {
   const socialMediaLinksComponents = socialMediaLinks.map((link) => (
     <LinkComponent
       key={link.name} // Make sure to provide a unique key for each component
+      label={link.name}
       href={link.href}
       icon={link.icon}
-      label={link.name}
     />
   ));
 
