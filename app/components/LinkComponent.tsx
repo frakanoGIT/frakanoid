@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import Link from "next/link";
 interface SocialMediaLinkProps {
   isLink?: boolean;
+  isCurrentPath?: boolean;
   href: string;
   icon: ReactNode;
   label: string;
@@ -16,6 +17,7 @@ const LinkComponent: React.FC<SocialMediaLinkProps> = ({
 }) => {
 
   const Component = isLink ? Link : 'a';
+  
   return (
     <Component href={href} target={isLink ? "_self" : "_blank"} className="mx-2 group" >
       <figure className="flex items-center group-hover:text-black group-hover:border-black">
