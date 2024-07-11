@@ -19,24 +19,23 @@ export default function Header() {
   const isCurrentPath = (path:string) => currentPage === path;
   const navPathStyles = "mr-1.5 fill-gray-500 group-hover:fill-black";
   const navPaths = [
-    // {
-    //   name: "about",
-    //   icon: <SvgPerson className={navPathStyles} />,
-    //   isCurrentPath: isCurrentPath('about')
-    // },
-    // {
-    //   name: "archives",
-    //   icon: <SvgArchive className={navPathStyles} />,
-    //   isCurrentPath: isCurrentPath('archives')
-    // },
+    {
+      name: "about",
+      icon: <SvgPerson className={navPathStyles} />,
+      isCurrentPath: isCurrentPath('/about')
+    },
+    {
+      name: "archives",
+      icon: <SvgArchive className={navPathStyles} />,
+      isCurrentPath: isCurrentPath('/archives')
+    },
     {
       name: "blogs",
       icon: <SvgBlog className={navPathStyles} />,
-      isCurrentPath: isCurrentPath('blogs')
+      isCurrentPath: isCurrentPath('/blogs')
     },
   ];
-
-
+  
   return (
     <header className="sticky top-0 z-50 h-20 w-full bg-gray-100 px-6 border-b border-b-gray-300 flex justify-between items-center overflow-hidden xl:static xl:max-w-7xl xl:rounded-t-3xl">
       <Link href="/" className="flex group">

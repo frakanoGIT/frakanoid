@@ -11,18 +11,20 @@ interface SocialMediaLinkProps {
 
 const LinkComponent: React.FC<SocialMediaLinkProps> = ({
   isLink,
+  isCurrentPath,
   href,
   icon,
   label,
 }) => {
 
   const Component = isLink ? Link : 'a';
-  
+  const figureStyles = "flex items-center group-hover:text-black group-hover:border-black";
+  const figcaptionStyles = `capitalize ${isCurrentPath ? "border-black text-black" : "border-transparent"} border-b  transition duration-300 group-hover:border-black`;
   return (
     <Component href={href} target={isLink ? "_self" : "_blank"} className="mx-2 group" >
-      <figure className="flex items-center group-hover:text-black group-hover:border-black">
+      <figure className={figureStyles}>
         {icon}
-        <figcaption className="capitalize border-b border-transparent transition duration-300 group-hover:border-black">
+        <figcaption className={figcaptionStyles}>
           {label}
         </figcaption>
       </figure>
