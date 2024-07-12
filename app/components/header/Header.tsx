@@ -17,21 +17,21 @@ const RUBIK = Rubik({ subsets: ["latin"] });
 export default function Header() {
   const currentPage = usePathname();
   const isCurrentPath = (path:string) => currentPage === path;
-  const navPathStyles = "mr-1.5 fill-gray-500 group-hover:fill-black";
+  const navPathStyles = "mr-1.5 group-hover:fill-black";
   const navPaths = [
     {
       name: "about",
-      icon: <SvgPerson className={navPathStyles} />,
+      icon: <SvgPerson className={`${navPathStyles} ${isCurrentPath('/about') ? "fill-black" : "fill-gray-500"}`}/>,
       isCurrentPath: isCurrentPath('/about')
     },
     {
       name: "archives",
-      icon: <SvgArchive className={navPathStyles} />,
+      icon: <SvgArchive className={`${navPathStyles} ${isCurrentPath('/archives') ? "fill-black" : "fill-gray-500"}`} />,
       isCurrentPath: isCurrentPath('/archives')
     },
     {
       name: "blogs",
-      icon: <SvgBlog className={navPathStyles} />,
+      icon: <SvgBlog className={`${navPathStyles} ${isCurrentPath('/blogs') ? "fill-black" : "fill-gray-500"}`} />,
       isCurrentPath: isCurrentPath('/blogs')
     },
   ];
@@ -41,7 +41,7 @@ export default function Header() {
       <Link href="/" className="flex group">
         <SvgFrakano className="mr-1.5 fill-black" />
         <h1
-          className={`${RUBIK.className} text-3xl text-gray-500 border-b border-b-transparent group-hover:text-black group-hover:border-black`}
+          className={`${RUBIK.className} text-3xl ${isCurrentPath('/') ? "text-black" : "text-gray-500"} border-b border-b-transparent group-hover:text-black group-hover:border-black`}
         >
           frakano.id
         </h1>
