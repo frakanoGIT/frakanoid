@@ -21,7 +21,7 @@ const LinkComponent: React.FC<SocialMediaLinkProps> = ({
   const figureStyles = "flex items-center group-hover:text-black group-hover:border-black";
   const figcaptionStyles = `capitalize ${isCurrentPath ? "border-black text-black" : "border-transparent"} border-b  transition duration-300 group-hover:border-black`;
   return (
-    <Component href={href} target={isLink ? "_self" : "_blank"} className="mx-2 group" >
+    <Component href={href} target={isLink ? "_self" : "_blank"} className="group" >
       <figure className={figureStyles}>
         {icon}
         <figcaption className={figcaptionStyles}>

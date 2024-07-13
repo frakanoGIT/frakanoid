@@ -21,17 +21,19 @@ export default function Footer() {
   ];
 
   const socialMediaLinksComponents = socialMediaLinks.map((link) => (
-    <LinkComponent
-      key={link.name} // Make sure to provide a unique key for each component
-      label={link.name}
-      href={link.href}
-      icon={link.icon}
-    />
+    <li className="mx-2" key={link.name}>
+      <LinkComponent
+        // Make sure to provide a unique key for each component
+        label={link.name}
+        href={link.href}
+        icon={link.icon}
+      />
+    </li>
   ));
 
   return (
     <footer className="h-16 bg-gray-100 px-6 border-t border-gray-300 flex justify-center items-center lg:justify-end xl:rounded-b-3xl xl:shadow-xl">
-      <div className="flex items-center">{socialMediaLinksComponents}</div>
+      <ul className="flex items-center">{socialMediaLinksComponents}</ul>
     </footer>
   );
 }
