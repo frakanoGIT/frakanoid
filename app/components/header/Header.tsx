@@ -31,58 +31,57 @@ export default function Header() {
       isCurrentPath: isCurrentPath("/about"),
     },
     {
-      name: "archives",
+      name: "archive",
       icon: (
         <SvgArchive
           className={`${navPathStyles} ${
-            isCurrentPath("/archives") ? "fill-black" : "fill-gray-500"
+            isCurrentPath("/archive") ? "fill-black" : "fill-gray-500"
           }`}
         />
       ),
-      isCurrentPath: isCurrentPath("/archives"),
+      isCurrentPath: isCurrentPath("/archive"),
     },
     {
-      name: "blogs",
+      name: "blog",
       icon: (
         <SvgBlog
           className={`${navPathStyles} ${
-            isCurrentPath("/blogs") ? "fill-black" : "fill-gray-500"
+            isCurrentPath("/blog") ? "fill-black" : "fill-gray-500"
           }`}
         />
       ),
-      isCurrentPath: isCurrentPath("/blogs"),
+      isCurrentPath: isCurrentPath("/blog"),
     },
   ];
 
   return (
-    <header className="sticky top-0 z-50 h-20 w-full bg-gray-100 px-6 border-b border-b-gray-300 overflow-hidden xl:static xl:max-w-7xl xl:rounded-t-3xl">
-      <nav className="flex h-full justify-between items-center">
-          <Link href="/" className="flex group">
-            <SvgFrakano className="mr-1.5 fill-black" />
-            <h1
-              className={`${RUBIK.className} text-3xl ${
-                isCurrentPath("/") ? "text-black" : "text-gray-500"
-              } border-b border-b-transparent group-hover:text-black group-hover:border-black`}
-            >
-              frakano.id
-            </h1>
-          </Link>
-        <ul className="fixed -left-full top-20 lg:flex lg:static">
+    <header className="sticky top-0 z-10 h-20 w-full bg-gray-100 border-b border-b-gray-300 overflow-hidden xl:static xl:max-w-7xl xl:rounded-t-3xl">
+      <nav className="flex justify-between items-center h-full">
+        <Link href="/" className="flex pl-6 group">
+          <SvgFrakano className="mr-1.5 fill-black" />
+          <h1
+            className={`${RUBIK.className} text-3xl ${
+              isCurrentPath("/") ? "text-black" : "text-gray-500"
+            } border-b border-b-transparent group-hover:text-black group-hover:border-black`}
+          >
+            frakano.id
+          </h1>
+        </Link>
+        <ul className="flex flex-col items-start fixed  top-20 right-0 z-20 w-96 h-screen bg-gray-100 shadow-md lg:flex-row lg:static lg:pr-6 lg:w-auto lg:h-auto lg:shadow-none">
         {navPaths.map((path) => (
-          <li key={path.name} className="mx-2 flex items-center">
-
-          <LinkComponent
-          href={path.name}
-          icon={path.icon}
-          label={path.name}
-          isLink={true}
-          isCurrentPath={path.isCurrentPath}
-          />
+          <li key={path.name} className="flex items-center justify-start w-full lg:mx-2">
+            <LinkComponent
+            href={path.name}
+            icon={path.icon}
+            label={path.name}
+            isLink={true}
+            isCurrentPath={path.isCurrentPath}
+            />
           </li>
         ))}
         </ul>
         {/* https://dev.to/devggaurav/let-s-build-a-responsive-navbar-and-hamburger-menu-using-html-css-and-javascript-4gci */}
-        <div className="block cursor-pointer lg:hidden">
+        <div className="cursor-pointer pr-6 lg:hidden">
           <span className="block w-7 h-1 my-1 mx-auto bg-gray-500 transition duration-300 ease-out"></span>
           <span className="block w-7 h-1 my-1 mx-auto bg-gray-500 transition duration-300 ease-out"></span>
           <span className="block w-7 h-1 my-1 mx-auto bg-gray-500 transition duration-300 ease-out"></span>

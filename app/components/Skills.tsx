@@ -18,7 +18,7 @@ export default function Skills() {
     <Section title="Skills" className="lg:row-start-2 lg:row-end-3 lg:col-start-1 lg:col-end-2">
       <ul className="grid grid-cols-2 gap-4">
         {programmingLanguages.map((language) => (
-          <li key={language.name} className={`flex py-3`}>
+          <li key={language.name} className={`flex relative py-3 left-1/4`}>
             {language.icon}
             {language.name}
           </li>
